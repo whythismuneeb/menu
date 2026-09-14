@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D AR Menu</title>
+    <script type="module" src="https://googleapis.com"></script>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #f9f9f9; }
+        model-viewer { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <model-viewer 
+        src="../assets/FILENAME.glb" 
+        ios-src="../assets/FILENAME.usdz" 
+        alt="A 3D Model of your dish" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        auto-rotate>
+        <button slot="ar-button" style="background-color: #ff6b6b; border: none; border-radius: 20px; padding: 12px 24px; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: white; font-size: 16px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
+            👋 View on Table (AR)
+        </button>
+    </model-viewer>
+</body>
+</html>
